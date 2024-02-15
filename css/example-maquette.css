@@ -1,0 +1,1009 @@
+/**
+    Déclaration global a toute l'application
+    Cette partie est modifié SEULEMENT APRES avoir communiquer avec les autre membre de l'équipe.
+    --------------------------------------------------------------------------------------------
+**/
+
+/** Chargement des polices **/
+
+/** Déclaration du box-sizing **/
+
+/** Sémantique permettant un aspect constant sur toute l'application **/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    border-radius: 35px;
+    padding: 10px;
+    margin: 10px;
+}
+
+header div:first-of-type+h3 {
+    display: inline-block;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+header div:last-child {
+    position: relative;
+    right: 10px;
+}
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    width: 75%;
+    height: 50px;
+    margin: auto;
+}
+
+nav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li>a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px 20px;
+    transition: all 1s ease-out;
+}
+
+nav ul li>a:hover {
+    background-color: #7c7878;
+    color: whitesmoke;
+}
+
+nav ul li .active {
+    background-color: rgb(75, 71, 71);
+    color: white;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+nav .active:hover {
+    background-color: lightslategray;
+    color: white;
+    transition: all 1s ease-out;
+}
+
+aside {}
+
+main {}
+
+footer {}
+
+.footer-top {
+    background-color: rgb(238, 231, 231);
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* height: 250px; */
+}
+
+.footer-top .entreprise, .footer-top .Assistance {
+    display: none;
+}
+
+/* .footer-top div {
+    flex-basis: 300px;
+    text-align: center;
+    margin-top: 3%;
+} */
+
+/* .footer-top ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-top div ul li {
+    margin-top: 2%;
+} */
+
+.footer-lien {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-lien .footer-lieu {
+    position: relative;
+    right: 5%;
+}
+
+.footer-lien .footer-reseau img {
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    left: 5%;
+}
+
+.footer-bottom {
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+
+.footer-bottom>div {
+    position: relative;
+    padding: 15px 0;
+}
+
+/**
+    Déclaration spécifique a chaque page au besoin.
+    Chaque personne travaille sur une page à la fois donc il ne devrait jamais y avoir de conflit.
+
+    2 examples: home et contact
+    --------------------------------------------------------------------------------------------
+**/
+
+/** Example pour les cas spécifiques de la page home **/
+
+.home {
+    display: grid;
+    grid-template-areas:
+        "head"
+        "nav"
+        "main"
+        "aside";
+    grid-template-columns: auto;
+    grid-template-rows: 100px 50px 1fr 300px;
+}
+
+.home header {
+    grid-area: head;
+}
+
+.home nav {
+    grid-area: nav;
+}
+
+/***************************************** aside *************************************/
+
+.home aside {
+    background-color: whitesmoke;
+    grid-area: aside;
+    font-size: 0;
+}
+
+.home aside h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 2% 0;
+}
+
+.home aside div {
+    display: inline-block;
+    width: 33.33%;
+    height: 250px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/****************************************** main **************************************/
+.home main {
+    /* background-color: green; */
+    grid-area: main;
+}
+
+.home main .section1 {
+    position: relative;
+}
+
+.home main .section1>div {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+}
+
+.home main .section1>div p, .home main .section1>div h2 {
+    width: 60%;
+}
+
+.home main .section1>div h2 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.home main .section1 img {
+    width: 100%;
+}
+
+.home main .section1>div a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #7c7878;
+    border-radius: 5px 5px;
+    transition: all 1s ease-out;
+    margin: 5px;
+}
+
+.home main .section1>div a:hover {
+    background-color: white;
+    color: black;
+}
+
+.home main .carousel h1 {
+    text-align: center;
+    animation: 7s sliden infinite;
+}
+
+/* @keyframes sliden {
+    from {
+        width: 100%;
+    }
+
+    50% {
+        width: 75%;
+        margin-left: 20%;
+    }
+
+    to {
+        width: 50%;
+    }
+} */
+
+.home main .section2 ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 260px;
+}
+
+.home main .section2 ul li {
+    flex-basis: 30%;
+    position: relative
+}
+
+.home main .section2 ul li:first-of-type,
+.home main .section2 ul li:last-of-type {
+    flex-basis: 35%;
+}
+
+.home main .section2 ul li img {
+    width: 100%;
+    height: 260px;
+}
+
+.home main .section2 ul li:nth-of-type(2) {
+    background-color: rgb(214, 205, 205);
+}
+
+.home main .section2 ul li h3,
+.home main .section2 ul li p {
+    position: relative;
+    text-align: center;
+    /* top: 5%; */
+}
+
+.home main .section2 ul li p {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.home main .section3 {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+}
+
+.home main .section3 ul {
+    display: none;
+}
+
+.home main .section3 .slider {
+    /* on définit la hauteur de la section */
+    max-height: 100%;
+    /* on centre la section */
+    overflow: hidden;
+}
+
+.home main .section3 .slider .slider-container {
+    position: relative;
+    /* on définit la largeur du conteneur des images */
+    width: 400%;
+    /* on applique l'animation slide pendant 15 secondes avec un loop infini */
+    animation: 5s slide infinite;
+}
+
+.home main .section3 .slider .slider-container img {
+    width: 25%;
+    float: left;
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+
+    35% {
+        left: -100%;
+    }
+
+    75% {
+        left: -200%;
+    }
+
+    100% {
+        left: -300%;
+    }
+}
+
+.home main .section3 div p, .home main .section3 div h2 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.home main .section3 div p {
+    /* margin-top: 5%; */
+}
+
+.home footer {}
+
+/** Example pour les cas spécifiques de la page contact **/
+
+.contact header {}
+
+.contact nav {}
+
+.contact aside {}
+
+.contact main {}
+
+.contact main form {}
+
+.contact footer {}
+
+
+@font-face {
+    font-family: 'Seagramtfb';
+    src: url('../fonts/Seagramtfb.eot');
+    src: url('../fonts/Seagramtfb.eot') format('embedded-opentype'),
+        url('../fonts/Seagramtfb.woff2') format('woff2'),
+        url('../fonts/Seagramtfb.woff') format('woff'),
+        url('../fonts/Seagramtfb.ttf') format('truetype'),
+        url('../fonts/Seagramtfb.svg#Seagramtfb') format('svg');
+}
+
+h1, h2, h3 {
+    font-family: "Seagramtfb", serif
+}
+
+
+
+
+/** Example pour les cas spécifiques de la page description **/
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.wrap-collabsible {
+    margin: 1.2rem 0;
+}
+
+.lbl-toggle {
+    display: block;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    color: #575050;
+    background: rgba(159, 161, 163, 0.2);
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+    color: #FFF;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 350px;
+}
+
+.toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+    background: rgba(0, 105, 255, .2);
+    border-bottom: 1px solid rgba(0, 105, 255, .45);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+}
+
+.collapsible-content p {
+    margin-bottom: 0;
+}
+
+/******************************************** Fin page plus de détail ***************************************/
+
+.detail-produit .taille ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.detail-produit .taille ul li {
+    border: 1px solid black;
+    margin: 15px 0;
+}
+
+.detail-produit .taille ul li>a {
+    padding: 35px 25px;
+    text-decoration: none;
+}
+
+.detail-produit .detail>div:last-of-type a {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px auto;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+    left: calc((100% - 152px) / 2);
+}
+
+.detail-produit .costume div img {
+    position: relative;
+    width: auto;
+    height: 300px;
+    left: 25%;
+}
+
+
+
+/**********************Page catalogue**********************/
+
+#catalogue-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.catalogue main img, .catalogue aside img {
+    min-height: 100px;
+    min-width: 50px;
+    border: 1px solid rgb(130, 98, 245);
+    border-radius: 10%;
+}
+
+.catalogue main img {
+    max-width: 150px;
+}
+
+.catalogue main p {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    display: grid;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 5px;
+}
+
+.catalogue-element {
+    display: flex;
+    width: 35vw;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
+.catalogue-englobe {
+    background: linear-gradient(to bottom, transparent 0, rgb(238, 231, 231) 100%);
+}
+
+.catalogue-element p {
+    box-shadow: 12px 12px 2px 1px rgb(172, 225, 255);
+}
+
+.catalogue-container {
+    position: relative;
+}
+
+.asidecatalogue {
+    display: flex;
+    border: 3px solid rgb(174, 212, 255);
+    background-color: rgb(238, 231, 231);
+    border-radius: 10px;
+    width: 80%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.catalogue aside p {
+    background-color: rgb(172, 225, 255);
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    display: grid;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 5px;
+}
+
+.asidecatalogue div {
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.catalogue aside img {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.catalogue aside div {
+    display: flex;
+    align-content: end;
+    align-self: center;
+    padding: 15px;
+}
+
+/*****Page Contact*****/
+
+.infodebase p:nth-of-type(1) {
+    grid-area: Nom;
+}
+
+.infodebase p:nth-of-type(2) {
+    grid-area: Prenom;
+}
+
+.infodebase p:nth-of-type(3) {
+    grid-area: Tel;
+}
+
+.infodebase p:nth-of-type(4) {
+    grid-area: Courriel;
+}
+
+.infodebase p:nth-of-type(5) {
+    grid-area: Age;
+}
+
+.infodebase {
+    display: grid;
+    grid-template-columns: 170px 170px;
+    grid-template-rows: 50px 60px;
+    grid-template-areas: "Nom Prenom"
+        "Tel Courriel"
+        "Age Age";
+    justify-items: center;
+    align-self: center;
+}
+
+.infosupp {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
+}
+
+.contact fieldset div {
+    padding: 10px 0 10px 0;
+}
+
+.contact form {
+    text-align: center;
+}
+
+.contact-container {
+    background-image: url(../contact/images/tuxedobackground.jpg);
+    height: 100%;
+    width: 100vw;
+}
+
+.contact-container .contactfade {
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0, rgb(238, 231, 231) 100%);
+}
+
+.contact input {
+    border-bottom: inset;
+    border-left: inset;
+    border-top: none;
+    border-right: none;
+    background-color: rgba(211, 211, 211, 0.8);
+    border-radius: 0 10px 0 0;
+}
+
+.contact textarea {
+    max-width: 300px;
+    align-self: center;
+}
+
+.contact button {
+    background-color: lightblue;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 40%;
+}
+
+.contact button:hover {
+    background-color: rgb(116, 116, 255);
+    transition: all 2s ease-out;
+}
+
+.contact fieldset {
+    background-color: rgba(211, 211, 211, 0.5);
+
+}
+
+.contact main {
+    height: calc(100vh - 187px);
+}
+
+
+
+
+
+/**
+    Déclaration des media query pour chaque taille.
+    --------------------------------------------------------------------------------------------
+**/
+@media only screen and (min-width:768px) {
+
+    .catalogue main p, .catalogue aside p {
+        background-color: lightblue;
+        text-align: center;
+        padding: 5px;
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+        display: grid;
+        align-items: center;
+        border-radius: 25px;
+        margin-left: 50px;
+    }
+
+    .catalogue-element {
+        display: flex;
+        width: 35vw;
+        align-items: center;
+    }
+
+    .catalogue-element p {
+        box-shadow: 12px 12px 2px 1px rgb(159, 166, 170);
+    }
+
+    /*******************************Contact*******************************/
+
+    .contact fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        height: 50vh;
+    }
+
+    textarea {
+        max-width: 330px;
+        max-height: 100px;
+        position: absolute;
+        right: 10%;
+        top: 150px;
+    }
+
+    .infosupp div:first-of-type {
+        margin: 0 25px 15px 25px;
+        width: 90px;
+    }
+
+    .infosupp {
+        position: relative;
+        top: 20px;
+    }
+
+    .contact fieldset div:nth-of-type(3) {
+        position: relative;
+        top: 40px;
+    }
+
+
+    .contact form button {
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+    }
+
+    /*********************************** Section2 *****************************/
+    .home main .section1>div p, .home main .section1>div h2 {
+        width: 45%;
+    }
+
+    .home main .section2 ul {
+        height: 400px;
+    }
+
+    .home main .section2 ul li {
+        flex-basis: 50%;
+    }
+
+    .home main .section2 ul li:first-of-type,
+    .home main .section2 ul li:last-of-type {
+        flex-basis: 25%;
+    }
+
+    .home main .section2 ul li img {
+        max-width: auto;
+        height: 100%;
+    }
+
+    .home main .section2 ul li h3,
+    .home main .section2 ul li p {
+        position: relative;
+        text-align: center;
+        top: 20%;
+    }
+
+    .home main .section2 ul li p {
+        width: 30%;
+        left: calc((100% - 30%) / 2);
+    }
+
+    /************************************* Section3 **********************************/
+    .home main .section3 {
+        /* display: block; */
+        position: relative;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .home main .section3 .slider {
+        display: none;
+    }
+
+    .home main .section3 ul {
+        position: absolute;
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        /* grid-area: aside; */
+        list-style-type: none;
+        padding-left: 0;
+        height: 250px;
+        width: 100vw;
+    }
+
+    .home main .section3 div p,
+    .home main .section3 div h2 {
+        display: none;
+    }
+
+    .home main .section3 li img {
+        width: 200px;
+        max-height: auto;
+    }
+
+
+    /************************************* Footer ***************************************/
+    .footer-top {
+        background-color: rgb(238, 231, 231);
+        display: flex;
+        flex-wrap: wrap;
+        height: 250px;
+    }
+
+    .footer-top .entreprise, .footer-top .Assistance {
+        display: block;
+    }
+
+    .footer-top div {
+        flex-basis: 33.33%;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    .footer-top ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .footer-top div ul li {
+        margin-top: 2%;
+    }
+
+
+    /******************************* Description *******************************/
+    main .detail-produit {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "costume"
+            "taille";
+
+        height: 400px;
+        position: relative;
+    }
+
+    .detail-produit .costume {
+        grid-area: costume;
+        display: flex;
+        position: relative;
+    }
+
+    .detail-produit .costume div {
+        flex-basis: 49%;
+        background-color: #7c7878;
+    }
+
+    .detail-produit .costume div img {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        left: 15%;
+    }
+
+    .detail-produit .costume div video {
+        margin-top: 5%;
+    }
+
+    .detail-produit .taille {
+        grid-area: taille;
+    }
+
+    .detail-produit .taille ul li a:hover {
+        background-color: #7c7878;
+        color: white;
+    }
+
+    .detail-produit .detail>div {
+        margin: 10px 0;
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (min-width:1280px) {
+
+    /** Example pour les cas spécifiques de la page home **/
+    /* .home {
+        display: grid;
+        grid-template-areas:
+            "head head"
+            "nav nav"
+            "aside main"
+            "foot foot";
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 50px 50px calc(100vh - 150px) 50px;
+    }
+
+    .home footer {
+        grid-area: foot;
+    } */
+    .catalogue main p {
+        background-color: lightgrey;
+        text-align: center;
+        padding: 5px;
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+        display: grid;
+        align-items: center;
+        border-radius: 25px;
+        margin-left: 5px;
+    }
+
+    .catalogue aside p {
+        background-color: rgb(172, 225, 255);
+    }
+
+    .catalogue-element {
+        display: flex;
+        width: 30vw;
+        align-items: center;
+        margin: 10px 0 10px 0;
+    }
+
+    *******************************Contact*******************************/ .contact fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        height: 50vh;
+    }
+
+    textarea {
+        max-width: 330px;
+        max-height: 100px;
+        position: absolute;
+        right: 10%;
+        top: 150px;
+    }
+
+    .infosupp div:first-of-type {
+        margin: 0 25px 15px 25px;
+        width: 90px;
+    }
+
+    .infosupp {
+        position: relative;
+        top: 20px;
+    }
+
+    .contact fieldset div:nth-of-type(3) {
+        position: relative;
+        top: 40px;
+    }
+
+
+    .contact form button {
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+    }
+}

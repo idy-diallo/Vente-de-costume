@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/example-maquette.css">
+</head>
+
+<body>
+    <div class="contact">
+        <header>
+            <div><img src="../images/logotuxedos.png" alt="logo"></div>
+            <h3>Premium Tuxedos</h3>
+            <div>
+                <input type="search" name="rechercher" id="rechercher">
+                <label for="rechercher">Rechercher</label>
+            </div>
+            <div>Login</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../catalogue/index.html">Catalogue</a></li>
+                <li><a class="active" href="../contact/index.html">Contact</a></li>
+                <li><a href="../description/index.html">Détails</a></li>
+            </ul>
+        </nav>
+        <div class="contact-container">
+            <main>
+                <aside>
+                    <h1>Formulaire de contact</h1>
+                </aside>
+
+                <form action="../index.html" method="post">
+                    <fieldset>
+                        <legend>Informations personnelles</legend>
+
+
+                        <div class="infodebase">
+                            <p>
+                                <label for="Name">Nom</label>
+                                <input type="text" name="Name" id="Name" required autofocus placeholder="Nom">
+                            </p>
+                            <p>
+                                <label for="Prenom">Prénom</label>
+                                <input type="text" name="Prenom" id="Prenom" required placeholder="Prénom">
+                            </p>
+                            <p>
+                                <label for="Phone">Téléphone</label>
+                                <input type="text" name="Phone" id="Phone" pattern=” [ 0-9] {3}- [0-9] {3}- [0-9] {4}”
+                                    required placeholder="Téléphone">
+                            </p>
+                            <p>
+                                <label for="Courriel">Courriel</label>
+                                <input type="text" name="Courriel" id="Courriel" required placeholder="Courriel">
+                            </p>
+                            <p><label for="Age">Âge</label>
+                                <input type="number" name="Age" id="Age" placeholder="0">
+                            </p>
+                        </div>
+                        <div class="infosupp">
+                            <div>Langue
+                                <p>
+                                    <input type="radio" name="Francais" id="Francais">
+                                    <label for="Francais">Français</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="Anglais" id="Anglais">
+                                    <label for="Anglais">Anglais</label>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    <label for="vetementslist">Vêtement préféré</label>
+                                </p>
+                                <p>
+                                    <input list="vetements" name="vetementslist" id="vetementslist"
+                                        placeholder="Aucun en particulier">
+                                    <datalist id="vetements">
+                                        <option value="Veston">Veston</option>
+                                        <option value="Chapeau">Chapeau</option>
+                                        <option value="Pantalon">Pantalon</option>
+                                        <option value="Chasussures">Chaussures</option>
+                                        <option value="Cravate">Cravate</option>
+                                        <option value="Noeud">Noeud papillon</option>
+                                        <option value="Chandail">Chandail</option>
+                                        <option value="Costume">Costume</option>
+                                    </datalist>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="Notifications" id="Notifications">
+                            <label for="Notifications">Je souhaite recevoir des notifications</label>
+                        </div>
+                        <textarea name="Commentaires" id="Commentaires" cols="100" rows="3"
+                            placeholder="Commentaires"></textarea>
+
+                    </fieldset>
+                    <button>Submit</button>
+                </form>
+            </main>
+            <div class="contactfade"></div>
+        </div>
+        <footer>
+            <div class="footer-top">
+                <div class="produit">
+                    <!-- <h3>Produit</h3>
+                    <ul class="footer-produit">
+                        <li>Lorem</li>
+                        <li>ipsum</li>
+                        <li>dolor</li>
+                        <li>porro</li>
+                        <li>magni</li>
+                    </ul> -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.047604771523!2d-73.56859132488476!3d45.529247571075075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91ba6e8cfe69f%3A0x2d0efc5223910c83!2sISI!5e0!3m2!1sfr!2sca!4v1686801682127!5m2!1sfr!2sca"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="entreprise">
+                    <h3>Entreprise</h3>
+                    <ul class="footer-entreprise">
+                        <li>doloremque</li>
+                        <li>tempore</li>
+                        <li>corporis</li>
+                        <li>cumque</li>
+                        <li>voluptatem</li>
+                    </ul>
+                </div>
+                <div class="Assistance">
+                    <h3>Assistance</h3>
+                    <ul class="footer-assistance">
+                        <li>tenetur</li>
+                        <li>architecto</li>
+                        <li>esse</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-lien">
+                <div class="footer-reseau">
+                    <span><a href="https://www.instagram.com/"><img src="../images/instagram.jpg" alt=""></a></span>
+                    <span><a href="https://www.facebook.com"><img src="../images/facebook.jpg" alt=""></a></span>
+                    <span><a href="https://twitter.com/"><img src="../images/twitter.jpg" alt=""></a></span>
+                    <span><a href="https://www.pinterest.com"><img src="../images/pinterest.png" alt=""></a></span>
+                    <span><a href="https://www.tiktok.com"><img src="../images/tiktok.png" alt=""></a></span>
+                </div>
+
+                <div class="footer-lieu">
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy;copyrigth 2023 - Premium Tuxedos - TOUS DROITS RÉSERVÉ</div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
